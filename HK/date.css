@@ -1,0 +1,40 @@
+.container-clock{
+    position: relative;
+    margin-top:80px;
+    margin-left:12px;
+
+    background-color: transparent;
+    border:3px solid midnightblue;
+
+    color:navy;
+    width:200px;
+    padding:20px;
+    border-radius: 40px;
+    transition:1.5s; 
+}
+.container-clock:hover{
+    background-color: beige;
+    color:black;
+    box-shadow:0 0 30px beige;
+}
+.time{
+    font-size:20px;
+    font-weight: 600px;
+    text-align: center;
+}
+.date{
+    font-size:20px;
+    text-align: center;
+    font-style:italic;
+}
+#period{
+    font-size: 20px;
+}
+
+@media(max-width:600px){
+    .container-clock{
+        position:relative;
+        margin-top:50px;
+        margin-left:12px;
+    }
+}

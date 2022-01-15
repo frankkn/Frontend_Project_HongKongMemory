@@ -1,0 +1,83 @@
+.content{
+    height:758px;
+}
+
+.main-content{
+    background-color:aliceblue;
+} 
+
+.main-content h1{
+    /* margin-top:20px; */
+    text-align: center;
+    padding:20px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    text-shadow: 3px 3px 3px blanchedalmond;
+}
+
+.main-content p{
+    text-indent: 66px;
+    font-size:25px;
+    letter-spacing: 5px;
+    line-height: 50px;
+    padding-left:50px;
+    padding-right:50px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color:palevioletred;
+}
+
+.sidenav{
+    padding-top:30px;
+    background-color:rgb(229, 249, 252);
+}
+
+.sidenav h4{
+    margin-left:-10px;
+    text-align: center;
+    color:midnightblue;
+    font-size:25px;
+    padding:20px;
+}
+
+.btn-link{
+    text-decoration:none;
+    background-color:mistyrose;
+    font-size:17px;
+    width:100%;
+    padding:20px;
+    margin-top:10px;
+}
+
+.btn-link:hover{
+    background-color: royalblue;
+    transition: 1s;
+    color:white;
+}
+
+.food img{
+    margin-left:50px;
+    width:60%;
+    height: 60%;
+}
+
+.food p{
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    height:70px;
+    background-color:rgb(185, 197, 209);
+    padding-top:23px;
+}
+
+@media(max-width:600px){
+    .main-content p{
+        padding-left:0px;
+        padding-right:0px;
+        text-indent: 64px;
+    }
+    footer{
+        position:absolute;
+        top:415%;
+    }
+}

@@ -1,0 +1,138 @@
+.main-content{
+    background-color:mintcream;
+    border:3px solid black;
+}
+
+.main-content h1{
+    text-align: center;
+    color:navy;
+}
+
+.main-content ul{
+    display: flex;
+    /* margin-left:300px;  */
+}
+
+.main-content .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:-50px;
+}
+
+.main-content ul li{
+    list-style: none;
+}
+
+.main-content ul li a{
+    color:gray;
+    font-size: 80px;
+}
+
+.main-content ul li a .fa-facebook:hover{
+    color:blue;
+}
+
+.main-content ul li a .fa-line:hover{
+    color:green;
+}
+
+.main-content ul li a .fa-instagram:hover{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.profile-img{
+    width:150px;
+    height: 150px;
+    clip-path: circle(40%);
+
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top:0px;
+}
+
+.card{
+    background-color: beige;
+    height:600px;
+    width:30%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+
+.banner-image{
+    background-image: url(images/background.png);
+    height:200px;
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.card-title,.card-text{
+    text-align: center;
+    line-height:20px;
+    font-family: system-ui;
+}
+
+.card-body .btn{
+    width:100%;
+    height:68px;
+    border:none;
+    font-size:20px;
+    color:lightblue;
+    background-color: blueviolet;
+    padding:20px;
+    position:absolute;
+    bottom:0;
+    left:0;
+
+    transition: 0.5s ease-in;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.card-body .btn:hover{
+    color:navy;
+}
+
+footer{
+    height:70px;
+    background-color:rgb(185, 197, 209);
+    padding-top:23px;
+}
+
+.card-body .btn::before{
+    background-color: lightblue;
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    right:50%;
+    bottom:0;
+    transition:0.5s all ease;
+}
+
+.card-body .btn:hover::before{
+    transition:0.5s all ease;
+    left:0;
+    right:0;
+    border-radius: 15px;
+    z-index:-1;
+}
+
+@media (max-width:600px) {
+
+    .card{
+        height:600px;
+        width:60%;
+    }
+}

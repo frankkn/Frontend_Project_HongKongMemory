@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenery page</title>
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--連結JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <!--連結isotope-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <!-- SimplePagination 連結 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="scenery.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img width="50px;" height="35px;" src="images/香港國旗.png"></a>
+            <!--手機版會跑出一個選單按鈕-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--PC版本-->
+            <div class="collapse navbar-collapse" id="linkbar">
+                <!--列出導覽列內容-->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scenery.html">Scenery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="friends.html">Friends</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="dormitory.html">Dormitory</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About me</a>
+                    </li>
+                </ul>
+                <!-- 列出"搜尋引擎"到右邊
+                <form class="input-group" style="width:300px;">
+                    <input class="form-control me-2" type="search" placeholder="搜尋">
+                    <butoon class="btn btn-primary" type="submit">搜尋</butoon>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    
+    <!--第二層 三欄位-->
+    <div class="container-fluid">
+        <div class="row content">
+            <!--左邊欄位-->
+            <div class="col-sm-2 sidenav">
+            </div>
+            <!--中間欄位-->
+            <div class="col-sm-8 main-content text-left">
+                <h1>香港風景</h1>
+                <!--按鈕-->
+                <div class="allbuttons">
+                    <button class="button" data-filter=".all">全部</button>
+                </div>
+                <div class="filters">
+                    <button class="button" data-filter=".維多利亞港">維多利亞港</button>
+                    <button class="button" data-filter=".海洋公園">海洋公園</button>
+
+                    <button class="button" data-filter=".長洲">長洲</button>
+                    <button class="button" data-filter=".橋咀島和廈門灣">橋咀島和廈門灣</button>
+
+                    <button class="button" data-filter=".赤柱">赤柱</button>
+                    <button class="button" data-filter=".昂坪和大澳漁村">昂坪和大澳漁村</button>
+
+                    <button class="button" data-filter=".太平山">太平山</button>
+                    <button class="button" data-filter=".海下灣">海下灣</button>
+
+                    <button class="button" data-filter=".中環">中環</button>
+                    <button class="button" data-filter=".迪心湖">迪心湖</button>
+
+                    <button class="button" data-filter=".澳門">特別篇 - 澳門</button>
+                </div>
+                <!--圖片-->
+                <div class="grid">
+                    <div class="container items 維多利亞港">
+                        <a href="images/維多利亞港/維多利亞港2.JPG" class="width">
+                            <img src="images/維多利亞港/維多利亞港2.JPG">
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港3.JPG" class="width">
+                            <img src="images/維多利亞港/維多利亞港3.JPG">
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港1.JPG" class="superbig">
+                            <img src="images/維多利亞港/維多利亞港1.JPG">
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港4.JPG" class="width">
+                            <img src="images/維多利亞港/維多利亞港4.JPG">
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港5.JPG" class="superbig">
+                            <img src="images/維多利亞港/維多利亞港5.JPG">
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港7.JPG" class="big">
+                            <img src="images/維多利亞港/維多利亞港7.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/維多利亞港/幻彩詠香江.MOV"></video>
+                        </a>
+                        <a href="images/維多利亞港/維多利亞港6.JPG" class="big">
+                            <img src="images/維多利亞港/維多利亞港6.JPG">
+                        </a> 
+                    </div>
+
+                    <div class="container items 海洋公園">
+                        <a href="images/海洋公園/海洋公園1.JPG" class="big">
+                            <img src="images/海洋公園/海洋公園1.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園2.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園2.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園3.JPG" class="">
+                            <img src="images/海洋公園/海洋公園3.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園4.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園4.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園5.JPG" class="big">
+                            <img src="images/海洋公園/海洋公園5.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園6.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園6.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園7.MOV"></video>
+                        </a>
+                        <a href="images/海洋公園/海洋公園8.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園8.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園9.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園9.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園10.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園10.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園11.JPG" class="big">
+                            <img src="images/海洋公園/海洋公園11.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園12.MOV"></video>
+                        </a>
+                        <a href="images/海洋公園/海洋公園13.JPG" class="">
+                            <img src="images/海洋公園/海洋公園13.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園14.JPG" class="">
+                            <img src="images/海洋公園/海洋公園14.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園15.JPG" class="width">
+                            <img src="images/海洋公園/海洋公園15.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園16.JPG" class="">
+                            <img src="images/海洋公園/海洋公園16.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園17.MOV"></video>
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園18.MOV"></video>
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園19.MOV"></video>
+                        </a>
+                        <a href="images/海洋公園/海洋公園20.JPG" class="">
+                            <img src="images/海洋公園/海洋公園20.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園21.MOV"></video>
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園22.MOV"></video>
+                        </a>
+                        <a href="images/海洋公園/海洋公園23.JPG" class="big">
+                            <img src="images/海洋公園/海洋公園23.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/海洋公園/海洋公園24.MOV"></video>
+                        </a>
+                        <a href="images/海洋公園/海洋公園25.JPG" class="">
+                            <img src="images/海洋公園/海洋公園25.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園26.JPG" class="">
+                            <img src="images/海洋公園/海洋公園26.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園27.JPG" class="">
+                            <img src="images/海洋公園/海洋公園27.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園28.JPG" class="">
+                            <img src="images/海洋公園/海洋公園28.JPG">
+                        </a>
+                        <a href="images/海洋公園/海洋公園29.JPG" class="">
+                            <img src="images/海洋公園/海洋公園29.JPG">
+                        </a>
+                    </div>
+
+                    <div class="container items 長洲">
+                        <a href="images/長洲/長洲1.JPG" class="superbig">
+                            <img src="images/長洲/長洲1.JPG">
+                        </a>
+                        <a href="images/長洲/長洲3.JPG" class="superbig ">
+                            <img src="images/長洲/長洲3.JPG">
+                        </a>
+                        <a href="images/長洲/長洲5.JPG" class="">
+                            <img src="images/長洲/長洲5.JPG">
+                        </a>
+                        <a href="images/長洲/長洲6.JPG" class="">
+                            <img src="images/長洲/長洲6.JPG">
+                        </a>
+                        <a href="images/長洲/長洲9.JPG" class="big">
+                            <img src="images/長洲/長洲9.JPG">
+                        </a>
+                        <a href="images/長洲/長洲8.JPG" class="width">
+                            <img src="images/長洲/長洲8.JPG">
+                        </a>
+                        <a href="images/長洲/長洲7.JPG" class="big">
+                            <img src="images/長洲/長洲7.JPG">
+                        </a>
+                        <a href="images/長洲/長洲10.JPG" class="big">
+                            <img src="images/長洲/長洲10.JPG">
+                        </a>
+                        <a href="images/長洲/長洲11.JPG" class="width">
+                            <img src="images/長洲/長洲11.JPG">
+                        </a>
+                        <a href="images/長洲/長洲2.JPG" class="superbig ">
+                            <img src="images/長洲/長洲2.JPG">
+                        </a>
+                        <a href="images/長洲/長洲4.JPG" class="superbig ">
+                            <img src="images/長洲/長洲4.JPG">
+                        </a>
+                    </div>
+
+                    <div class="container items 橋咀島和廈門灣">
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣1.JPG" class="width">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣1.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣2.JPG" class="width">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣2.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣3.JPG" class="width">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣3.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣4.JPG" class="">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣4.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣5.JPG" class="big">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣5.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣6.JPG" class="big">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣6.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣7.JPG" class="superbig">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣7.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣8.JPG" class="superbig">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣8.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣9.JPG" class="">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣9.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣10.JPG" class="">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣10.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣11.JPG" class="superbig">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣11.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣12.JPG" class="superbig">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣12.JPG">
+                        </a>
+                        <a href="images/橋咀島和廈門灣/橋咀島和廈門灣13.JPG" class="">
+                            <img src="images/橋咀島和廈門灣/橋咀島和廈門灣13.JPG">
+                        </a>
+                    </div>
+
+                    <div class="container items 赤柱">
+                        <a href="images/赤柱/赤柱1.JPG" class="superbig">
+                            <img src="images/赤柱/赤柱1.JPG">
+                        </a>
+                        <a href="images/赤柱/赤柱2.JPG" class="superbig">
+                            <img src="images/赤柱/赤柱2.JPG">
+                        </a> 
+                        <a href="images/赤柱/赤柱3.JPG" class="big">
+                            <img src="images/赤柱/赤柱3.JPG">
+                        </a> 
+                        <a href="images/赤柱/赤柱4.JPG" class="big">
+                            <img src="images/赤柱/赤柱4.JPG">
+                        </a> 
+                        <a href="images/赤柱/赤柱5.JPG" class="big">
+                            <img src="images/赤柱/赤柱5.JPG">
+                        </a>  
+                    </div>
+
+                    <div class="container items 昂坪和大澳漁村">
+                        <a href="images/昂坪和大澳漁村/昂坪1.JPG" class="superbig">
+                            <img src="images/昂坪和大澳漁村/昂坪1.JPG">
+                        </a>
+                        <a href="images/昂坪和大澳漁村/昂坪7.JPG" class="superbig">
+                            <img src="images/昂坪和大澳漁村/昂坪7.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪2.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪2.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪3.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/昂坪3.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪6.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪6.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪5.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/昂坪5.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪4.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/昂坪4.JPG">
+                        </a>   
+                        <a href="images/昂坪和大澳漁村/昂坪8.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪8.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪9.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪9.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪10.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪10.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪11.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪11.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪12.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/昂坪12.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪13.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪13.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/昂坪14.JPG" class="big">
+                            <img src="images/昂坪和大澳漁村/昂坪14.JPG">
+                        </a> 
+                        <a href="images/昂坪和大澳漁村/大澳2.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/大澳2.JPG">
+                        </a>
+                        <a href="images/昂坪和大澳漁村/大澳4.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/大澳4.JPG">
+                        </a>
+                        <a href="images/昂坪和大澳漁村/昂坪15.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/昂坪15.JPG">
+                        </a>  
+                        <a href="images/昂坪和大澳漁村/大澳3.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/大澳3.JPG">
+                        </a>  
+                        <a href="images/昂坪和大澳漁村/大澳5.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/大澳5.JPG">
+                        </a> 
+                        <a href="#" class="width">
+                            <video controls>
+                            <source src="images/昂坪和大澳漁村/大澳6.MOV"></video>
+                        </a>
+                        <a href="images/昂坪和大澳漁村/大澳7.JPG" class="width">
+                            <img src="images/昂坪和大澳漁村/大澳7.JPG">
+                        </a>
+                        <a href="images/昂坪和大澳漁村/大澳1.JPG" class="superbig">
+                            <img src="images/昂坪和大澳漁村/大澳1.JPG">
+                        </a>  
+                        <a href="images/昂坪和大澳漁村/大澳8.JPG" class="superbig">
+                            <img src="images/昂坪和大澳漁村/大澳8.JPG">
+                        </a> 
+                    </div>
+
+                    <div class="container items 太平山">
+                        <a href="images/太平山/太平山1.JPG" class="width">
+                            <img src="images/太平山/太平山1.JPG">
+                        </a>
+                        <a href="#" class="big">
+                            <video controls>
+                            <source src="images/太平山/太平山5.MOV"></video>
+                        </a>
+                        <a href="images/太平山/太平山2.JPG" class="width">
+                            <img src="images/太平山/太平山2.JPG">
+                        </a>
+                        <a href="images/太平山/太平山3.JPG" class="width">
+                            <img src="images/太平山/太平山3.JPG">
+                        </a>
+                        <a href="images/太平山/太平山4.JPG" class="width">
+                            <img src="images/太平山/太平山4.JPG">
+                        </a>
+                    </div>
+
+                    <div class="container items 海下灣">
+                        <a href="images/海下灣/海下灣1.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣1.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣2.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣2.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣5.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣5.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣4.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣4.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣8.JPG" class="big">
+                            <img src="images/海下灣/海下灣8.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣10.JPG" class="big">
+                            <img src="images/海下灣/海下灣10.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣9.JPG" class="big">
+                            <img src="images/海下灣/海下灣9.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣6.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣6.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣3.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣3.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣7.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣7.JPG">
+                        </a>
+                        <a href="images/海下灣/海下灣11.JPG" class="superbig">
+                            <img src="images/海下灣/海下灣11.JPG">
+                        </a>
+
+                    </div>
+
+                    <div class="container items 中環">
+                        <a href="images/中環/中環1.JPG" class="superbig">
+                            <img src="images/中環/中環1.JPG">
+                        </a>
+                        <a href="images/中環/中環3.JPG" class="superbig">
+                            <img src="images/中環/中環3.JPG">
+                        </a>
+                        <a href="images/中環/中環6.JPG" class="big">
+                            <img src="images/中環/中環6.JPG">
+                        </a>
+                        <a href="images/中環/中環5.JPG" class="big">
+                            <img src="images/中環/中環5.JPG">
+                        </a>
+                        <a href="images/中環/中環4.JPG" class="big">
+                            <img src="images/中環/中環4.JPG">
+                        </a>
+                        <a href="images/中環/中環7.JPG" class="big">
+                            <img src="images/中環/中環7.JPG">
+                        </a>
+                        <a href="images/中環/中環8.JPG" class="">
+                            <img src="images/中環/中環8.JPG">
+                        </a>
+                        <a href="images/中環/中環9.JPG" class="">
+                            <img src="images/中環/中環9.JPG">
+                        </a>
+                        <a href="images/中環/中環11.JPG" class="big">
+                            <img src="images/中環/中環11.JPG">
+                        </a>
+                        <a href="images/中環/中環12.JPG" class="width">
+                            <img src="images/中環/中環12.JPG">
+                        </a>
+                        <a href="images/中環/中環2.JPG" class="superbig">
+                            <img src="images/中環/中環2.JPG">
+                        </a>
+                        <a href="images/中環/中環10.JPG" class="superbig">
+                            <img src="images/中環/中環10.JPG">
+                        </a>
+                    </div>
+
+                    <div class="container items 迪心湖">
+                        <a href="images/迪心湖/迪心湖3.JPG" class="superwidth">
+                            <img src="images/迪心湖/迪心湖3.JPG">
+                        </a>
+                        <a href="images/迪心湖/迪心湖7.JPG" class="big">
+                            <img src="images/迪心湖/迪心湖7.JPG">
+                        </a>
+                        <a href="images/迪心湖/迪心湖8.JPG" class="big">
+                            <img src="images/迪心湖/迪心湖8.JPG">
+                        </a>
+                        <a href="images/迪心湖/迪心湖2.JPG" class="superwidth">
+                            <img src="images/迪心湖/迪心湖2.JPG">
+                        </a>  
+                        <a href="images/迪心湖/迪心湖4.JPG" class="superwidth">
+                            <img src="images/迪心湖/迪心湖4.JPG">
+                        </a>  
+                        <a href="images/迪心湖/迪心湖6.JPG" class="big">
+                            <img src="images/迪心湖/迪心湖6.JPG">
+                        </a>
+                        <a href="images/迪心湖/迪心湖1.JPG" class="superbig">
+                            <img src="images/迪心湖/迪心湖1.JPG">
+                        </a>
+                        <a href="images/迪心湖/迪心湖5.JPG" class="superbig">
+                            <img src="images/迪心湖/迪心湖5.JPG">
+                        </a> 
+                    </div>
+
+                    <div class="container items 澳門">
+                        <a href="images/澳門/澳門1.JPG" class="width">
+                            <img src="images/澳門/澳門1.JPG">
+                        </a>
+                        <a href="images/澳門/澳門2.JPG" class="width">
+                            <img src="images/澳門/澳門2.JPG">
+                        </a>
+                        <a href="images/澳門/澳門14.JPG" class="width">
+                            <img src="images/澳門/澳門14.JPG">
+                        </a>
+                        <a href="images/澳門/澳門3.JPG" class="width">
+                            <img src="images/澳門/澳門3.JPG">
+                        </a>
+                        <a href="images/澳門/澳門6.JPG" class="width">
+                            <img src="images/澳門/澳門6.JPG">
+                        </a>
+                        <a href="images/澳門/澳門5.JPG" class="width">
+                            <img src="images/澳門/澳門5.JPG">
+                        </a>
+                        <a href="images/澳門/澳門4.JPG" class="width">
+                            <img src="images/澳門/澳門4.JPG">
+                        </a>
+                        <a href="images/澳門/澳門7.JPG" class="">
+                            <img src="images/澳門/澳門7.JPG">
+                        </a>
+                        <a href="images/澳門/澳門8.JPG" class="big">
+                            <img src="images/澳門/澳門8.JPG">
+                        </a>
+                        <a href="images/澳門/澳門9.JPG" class="big">
+                            <img src="images/澳門/澳門9.JPG">
+                        </a>
+                        <a href="images/澳門/澳門10.JPG" class="big">
+                            <img src="images/澳門/澳門10.JPG">
+                        </a>
+                        <a href="images/澳門/澳門11.JPG" class="">
+                            <img src="images/澳門/澳門11.JPG">
+                        </a>
+                        <a href="images/澳門/澳門12.JPG" class="">
+                            <img src="images/澳門/澳門12.JPG">
+                        </a>
+                        <a href="images/澳門/澳門13.JPG" class="">
+                            <img src="images/澳門/澳門13.JPG">
+                        </a>
+                        <a href="images/澳門/澳門15.JPG" class="big">
+                            <img src="images/澳門/澳門15.JPG">
+                        </a>
+                        <a href="images/澳門/澳門21.JPG" class="width">
+                            <img src="images/澳門/澳門21.JPG">
+                        </a>
+                        <a href="images/澳門/澳門16.JPG" class="width">
+                            <img src="images/澳門/澳門16.JPG">
+                        </a>
+                        <a href="images/澳門/澳門17.JPG" class="width">
+                            <img src="images/澳門/澳門17.JPG">
+                        </a>
+                        <a href="images/澳門/澳門18.JPG" class="width">
+                            <img src="images/澳門/澳門18.JPG">
+                        </a>
+                        <a href="images/澳門/澳門19.JPG" class="big">
+                            <img src="images/澳門/澳門19.JPG">
+                        </a>
+                        <a href="images/澳門/澳門22.JPG" class="width">
+                            <img src="images/澳門/澳門22.JPG">
+                        </a>
+                        <a href="images/澳門/澳門20.JPG" class="big">
+                            <img src="images/澳門/澳門20.JPG">
+                        </a>
+                        <a href="images/澳門/澳門23.JPG" class="width">
+                            <img src="images/澳門/澳門23.JPG">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--右邊欄位-->
+            <div class="col-sm-2 sidenav">
+            </div>
+        </div>
+    </div>
+
+    <!--第三層 Footer-->
+    <footer class="container-fluid text-center">
+        <p>Written by Frank Yang &copy;</p>
+    </footer>
+
+    <script src="scenery.js"></script>
+
+    <!--回上層按鈕-->
+    <a href="#top" class="fas fa-angle-up" id="scroll-up"></a>
+</body>
+</html>

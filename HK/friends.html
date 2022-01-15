@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends page</title>
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- JQuery 連結 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- SimplePagination 連結 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="friends.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img width="50px;" height="35px;" src="images/香港國旗.png"></a>
+            <!--手機版會跑出一個選單按鈕-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--PC版本-->
+            <div class="collapse navbar-collapse" id="linkbar">
+                <!--列出導覽列內容-->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scenery.html">Scenery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="friends.html">Friends</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="dormitory.html">Dormitory</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About me</a>
+                    </li>
+                </ul>
+                <!-- 列出"搜尋引擎"到右邊
+                <form class="input-group" style="width:300px;">
+                    <input class="form-control me-2" type="search" placeholder="搜尋">
+                    <butoon class="btn btn-primary" type="submit">搜尋</butoon>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <!--第二層 三欄位-->
+    <div class="container-fluid">
+        <div class="row content">
+            <!--左邊欄位-->
+            <div class="col-sm-2 sidenav">
+
+            </div>
+            <!--中間欄位-->
+            <div class="col-sm-8 main-content text-left">
+
+                <div id="list-wrapper">
+                    <h1>Awesome Friends</h1>
+
+                    <div class="list-item">
+                        <img class="vertical" width="60%;"src="images/Friends/維港三人行.JPG">
+
+                        <h2>With Nina and Nick at Victoria harbor</h2>
+                        <p>Terrific weather, isn't it?</p>
+                    </div>
+
+                    <div class="list-item" id="photos">
+                        <img class="vertical" width="36%;" src="images/Friends/山頂纜車.JPG">
+                        <img class="horizontal" width="63%;" src="images/Friends/太平山.JPG">
+                        <h2>With Nina and Nick at Victoria peak</h2>
+                        <p>If there's one destination on every Hong Kong itinerary, it's likely Victoria Peak.</p>
+                        
+                    </div>
+
+                    <div class="list-item">
+                        <img class="vertical" width="50%;" src="images/Friends/旺角.JPG">
+                        <h2>With Nina,Nick and Allen at Mong Kok MTR</h2>
+                        <p>Wonderful STM reunion in Hong Kong !</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img class="vertical" width="50%;" src="images/Friends/廟街.JPG">
+                        <h2>On Temple street</h2>
+                        <p>What were we doing ?</p>
+                        <p>Why did we take this photo ?</p>
+                    </div> 
+
+                    <div class="list-item">
+                        <img class="horizontal" width="95%;" src="images/Friends/中環嘉咸街.JPG">
+                        <h2>On Graham Street</h2>
+                        <p>A photo shot by a passerby.</p>
+                    </div>
+
+                    <div class="list-item" id="pics">
+                        <img class="vertical" width="30%" src="images/Friends/尖沙咀bar.JPG">
+                        <img class="vertical" width="30%" src="images/Friends/bar.JPG">
+                        <h2>With Keira on Knutsford Terrace</h2>
+                        <p>A good place for drinking!</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img class="horizontal" width="83%;"src="images/Friends/赤柱.JPG">
+                        <h2>At Stanley(赤柱)</h2>
+                        <p>Wonderful scenery!</p>
+                    </div> 
+
+                    <div class="list-item">
+                        <img class="horizontal" width="83%;" src="images/Friends/中環大館.JPG">
+                        <h2>With Candy and Dennis in Tai Kwun</h2>
+                        <p>The architecture is quite special there.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img class="vertical" width="45%;" src="images/Friends/橋咀島澤丸.JPG">
+                        <h2>With Jimmy on Sharp Island(橋咀島)</h2>
+                        <p>His skin color is really dark , amazing!<i class="fas fa-grin-tears"></i></p>
+                    </div> 
+                    <div class="list-item">
+                        <img class="vertical" width="50%;"src="images/Friends/澳門官也街.JPG">
+                        <h2>With Yvonne on Rua do Cunha(澳門官也街)</h2>
+                        <p>How young were we !</p>
+                    </div>  
+                </div>
+
+                <!--頁數-->
+                <div id="pagination-container">
+                </div>
+            </div>
+
+
+
+            <!--右邊欄位-->
+            <div class="col-sm-2 sidenav">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三層 Footer -->
+    <footer class="container-fluid">
+        <p>Written by Frank Yang &copy;</p>
+    </footer>
+
+    <!--JQuery程式-->
+    <script>
+        // 每個頁面要顯示幾個項目
+        var perPage = 1;
+        // 總共有多少個項目
+        var numItems = $(".list-item").length;
+
+        $(".list-item").slice(perPage).hide();
+
+        $('#pagination-container').pagination({
+            items: numItems,
+            itemsOnPage: perPage,
+            prevText: "&laquo;",
+            nextText: "&raquo;",
+            onPageClick: function(pageNumber) {
+                // 計算 起始(第一個不會執行) 以及 結束頁
+                var from = perPage*(pageNumber-1);
+                var to = from + perPage;
+                $(".list-item").hide().slice(from, to).show();
+            }
+        })
+    </script>
+
+</body>
+</html>

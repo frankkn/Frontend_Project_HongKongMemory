@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="date.css">
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body onload="startTime();updateCounter();">
+    <!--第一層 導覽列-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img width="50px;" height="35px;" src="images/香港國旗.png"></a>
+            <!--手機版會跑出一個選單按鈕-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--PC版本-->
+            <div class="collapse navbar-collapse" id="linkbar">
+                <!--列出導覽列內容-->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scenery.html">Scenery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="friends.html">Friends</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="dormitory.html">Dormitory</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About me</a>
+                    </li>
+                </ul>
+                <!-- 列出"搜尋引擎"到右邊
+                <form class="input-group" style="width:300px;">
+                    <input class="form-control me-2" type="search" placeholder="搜尋">
+                    <butoon class="btn btn-primary" type="submit">搜尋</butoon>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <!--第二層 投影片-->
+    <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+        <!--圖片投影 元件1-->
+        <div class="carousel-inner">
+            <!--第一張圖片 active-->
+            <div class="carousel-item active">
+                <img class="slide-pic" src="images/slideshow/長洲.JPG" alt="長洲">
+                <div class="carousel-caption">
+                    <h2>香港離島 - 長洲</h2>
+                </div>
+            </div> 
+            <div class="carousel-item">
+                <img class="slide-pic" src="images/slideshow/迪心湖.JPG" alt="迪心湖">
+                <div class="carousel-caption">
+                    <h2>迪心湖</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="slide-pic" src="images/slideshow/太平山夜景.JPG" alt="太平山">
+                <div class="carousel-caption">
+                    <h2>太平山夜景</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="slide-pic" src="images/slideshow/維多利亞港.JPG" alt="維多利亞港">
+                <div class="carousel-caption">
+                    <h2>維多利亞港</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="slide-pic" src="images/slideshow/赤柱.JPG" alt="赤柱">
+                <div class="carousel-caption">
+                    <h2>赤柱</h2>
+                </div>
+            </div>
+        </div>
+
+        <!--左右按鈕 元件2-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!--Indicator 元件3-->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#slideshow" data-bs-slide-to="4"></button>
+        </div>
+    </div>
+
+    <!--第三層 三欄位-->
+    <div class="container-fluid">
+        <div class="row content">
+            <!--左邊欄位-->
+            <div class="col-sm-2 sidenav">
+                <h4>精彩影片搶先看</h4>
+                <br>
+                <div class="page">
+                    <a href="https://youtu.be/K68-1y8VhpE" target="_blank"><button class="btn-link" >海洋公園 - 海豚秀</button></a>
+                </div>
+                <div class="page">
+                    <a href="https://youtu.be/iv_ul5U7Dk8" target="_blank"><button class="btn-link" >澳門 - 永利皇宮水舞秀</button></a>
+                </div>
+                <div class="page">
+                    <a href="https://youtu.be/TSaHKoejhm4" target="_blank"><button class="btn-link" >幻彩詠香江</button></a>
+                </div>
+                <div class="container-clock">
+                    <div class="datetime">
+                        <div class="time">
+                            <span id="hour">00</span>:
+                            <span id="minutes">00</span>:
+                            <span id="seconds">00</span>
+                            <span id="period">00</span>
+                        </div>
+                        <div class="date">
+                            <span id="dayname">星期</span>,
+                            <span id="month">月</span>
+                            <span id="daynum">00</span>日,
+                            <span id="year">year</span>年
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--中間欄位-->
+            <div class="col-sm-8 main-content text-left">
+                <br>
+                <h1>香港生活分享</h1>
+                <br>
+                <div class="intro">
+                    <p>哈囉，我是Frank，目前是清華大學(National Tsing Hua University)資訊工程研究所的學生。</p>
+                    <p>我曾經在香港工作過兩年，這個網頁主要是分享我在香港時的所見所聞，主要側重於香港的風景和美食。香港雖然占地不大，但其特殊的地理位置使其成為了國際重要的樞紐。
+                        除此之外，其特殊的文化風情、旅遊勝地和極具特色的港式飲茶，更是值得好好探索挖掘一番!</p>
+                    <p>如果還有任何問題，歡迎到 About me 聯絡我。</p>
+                </div>
+            </div>
+            <!--右邊欄位-->
+            <div class="col-sm-2 sidenav">
+                <h4>道地美食先聞香</h4>
+                <div class="food">
+                    <img src="images/sidenav/椰皇奶酪.png">
+                    <p>椰皇奶酪</p>
+                </div>
+                <div class="food">
+                    <img src="images/sidenav/腸粉.png">
+                    <p>腸粉</p>
+                </div>
+                <div class="food">
+                    <img src="images/sidenav/蓮香樓燒臘.png">
+                    <p>蓮香樓 - 臘味三拼</p>
+                </div>
+                <div class="counter">
+                    <p>來訪人數</p>
+                    <div class="container">
+                        <div><span id="visitors">  </span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--第四層 Footer-->
+    <footer class="container-fluid text-center">
+        <p>Written by Frank Yang &copy;</p>
+    </footer>
+
+    <script src="date.js">
+
+    </script>
+    <!--可用https://api.countapi.xyz/set/frank/0629?value=9歸零-->
+    <script>
+            function updateCounter(){
+                var link="https://api.countapi.xyz/update/frank/0629?amount=1"
+                fetch(link)
+                .then((response) =>{
+                    return response.json();
+                })
+                .then((data) => {
+                    document.getElementById("visitors").innerHTML = data.value;
+                })
+            }
+    </script>
+
+</body>
+</html>
