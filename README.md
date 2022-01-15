@@ -2,7 +2,9 @@
 
 🔭 Completion Date: July, 2021
 
-🌱 Used languages: HTML, CSS, javascript
+🎯 Used languages: HTML, CSS, javascript
+
+🌱 Other APIs: simplePagination, isotope, CountAPI, Bootstrap
 
 😄 Description: This is my first website. The main content is about my previous life in Hong Kong.(2018-2020)
 
