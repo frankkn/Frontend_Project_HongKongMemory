@@ -4,7 +4,7 @@
 
 🎯 Used languages: HTML, CSS, javascript
 
-🌱 Other APIs: simplePagination, isotope, CountAPI, Bootstrap
+🌱 Other APIs: simplePagination, isotope, CountAPI, Bootstrap(For RWD)
 
 😄 Description: This is my first website. The main content is about my previous life in Hong Kong.(2018-2020)
 
